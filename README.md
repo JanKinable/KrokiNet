@@ -1,2 +1,2 @@
 # KrokiNet
-Kroki client library
+Client library for [Kroki](https://kroki.io/).

@@ -5,15 +5,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>KrokiNet</Title>
+    <Title>KrokiNet DependencyInjection</Title>
     <Authors>JanKinable</Authors>
-    <Description>Kroki .Net client for generating diagrams using Kroki.io.</Description>
+    <Description>Kroki .Net client for generating diagrams using Kroki.io.
+This package is to be used with DependencyInjection.</Description>
     <PackageProjectUrl>https://github.com/JanKinable/KrokiNet</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/JanKinable/KrokiNet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +27,14 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KrokiNet\KrokiNet.csproj" />
   </ItemGroup>
 
 </Project>
